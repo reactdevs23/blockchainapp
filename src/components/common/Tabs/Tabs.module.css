@@ -1,0 +1,73 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.type2 {
+  border-radius: 44px;
+  background: var(--bg-300);
+  padding: 2px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+.type3 {
+  display: grid;
+  border-bottom: 1px solid var(--Base-700);
+  background: transparent;
+  width: 100%;
+}
+.tab {
+  color: var(--Base-500);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  border-radius: 36px;
+  padding: 8px 16px;
+  padding-bottom: 8px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.activeTab {
+  background: var(--Primary-Default);
+  color: var(--Primary-Content);
+  transform: translateY(0);
+}
+
+.type2 .activeTab {
+  background: rgba(43, 99, 225, 0.1);
+  color: var(--Primary-Default);
+}
+.type3 .activeTab {
+  color: var(--Primary-Content);
+  background: transparent;
+  position: relative;
+  border-radius: 3px 3px 0px 0px;
+}
+.lightTheme.type3 .activeTab {
+  color: var(--Base-0);
+}
+
+.type3 .activeTab::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  border-radius: 3px 3px 0 0;
+  height: 3px;
+  width: 100%;
+  background: var(--Primary-Default);
+}
+.activeTab:hover {
+  transform: translateY(0);
+}
+.tab:hover {
+  transform: translateY(0);
+}

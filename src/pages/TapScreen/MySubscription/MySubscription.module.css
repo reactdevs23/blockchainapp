@@ -1,0 +1,70 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border-radius: 12px;
+  background: var(--Base-800);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.item:hover {
+  transform: translateY(-3px);
+}
+.imgTitleAndProfit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  height: 100%;
+}
+.img {
+  display: block;
+  max-width: 68px;
+  width: 100%;
+  padding: 10px;
+}
+.titleAndProfit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profitWrapper {
+  display: flex;
+
+  flex-direction: column;
+  gap: 3px;
+}
+.profitContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.balanceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  border-top: 1px solid var(--Base-700);
+}
+.levelAndBalance {
+  border-left: 1px solid var(--Base-700);
+}
+.level,
+.balanceWrapper {
+  padding: 16px;
+}
+.coin {
+  max-width: 16px;
+}

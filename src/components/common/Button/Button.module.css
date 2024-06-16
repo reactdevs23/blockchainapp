@@ -1,0 +1,46 @@
+.button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 10px;
+
+  background: var(--Primary-Default);
+  color: var(--Primary-Content);
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+.base950 {
+  border-radius: 10px;
+  background: var(--Base-950);
+  color: var(--Base-500);
+}
+
+.noShadow {
+  box-shadow: none;
+}
+.transparentBase0 {
+  border: 1px solid var(--Base-0);
+  color: var(--Base-0);
+}
+.transparentBase950 {
+  border-radius: 10px;
+  border: 1px solid var(--Base-950);
+  color: var(--Base-950);
+}
+.primaryDefault {
+  background: var(--Primary-Default);
+  color: var(--Primary-Content);
+  border: 1px solid var(--Primary-Default);
+}
+
+.wFull {
+  width: 100%;
+}

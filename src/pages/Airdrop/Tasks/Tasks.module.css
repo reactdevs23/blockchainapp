@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.task {
+  border-radius: 16px;
+
+  background: var(--bg-100);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  gap: 10px;
+}
+.icon {
+  cursor: pointer;
+  color: var(--Base-600);
+  width: 100%;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.icon:hover {
+  transform: translateY(-3px);
+}
+.checkmark {
+  color: var(--Success-Default);
+  font-size: 16px;
+  margin-top: 2px;
+}

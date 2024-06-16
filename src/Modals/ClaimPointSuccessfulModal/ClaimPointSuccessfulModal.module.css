@@ -1,0 +1,32 @@
+.modal {
+  top: 40px;
+  border-radius: 10px;
+  height: max-content;
+  width: 95%;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.wrapper {
+  border-radius: 10px;
+  border: 1px solid var(--Primary-Default);
+  background: var(--Primary-Default);
+  padding: 14px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.info {
+  font-size: 14px;
+}
+
+.text {
+  font-weight: 400;
+}
+.icon {
+  font-size: 20px;
+  color: var(--Primary-Content);
+}

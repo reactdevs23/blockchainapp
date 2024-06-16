@@ -1,0 +1,92 @@
+.wrapper {
+  border-radius: 16px;
+  background: var(--Base-800);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.arrow {
+  color: var(--Base-600);
+  font-size: 18px;
+}
+.type2 .arrow {
+  color: var(--Primary-Default);
+  opacity: 0.5;
+}
+.token .arrow {
+  color: var(--Base-0);
+}
+.selectContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+.token {
+  display: flex;
+  padding: 0px 8px 0px 6px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 32px;
+  background: var(--Base-900);
+}
+.input {
+  width: 100%;
+  color: var(--Base-400);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+  background: transparent;
+}
+.selectBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px 4px 12px;
+
+  border-radius: 32px;
+  background: rgba(43, 99, 225, 0.1);
+}
+.selectedItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.logo {
+  max-width: 20px;
+  width: 100%;
+}
+.selectTokenText {
+  white-space: nowrap;
+}
+.balanceContainer {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  width: 100%;
+}
+.balanceLabel {
+  margin-left: auto;
+  text-align: right;
+}
+.balance {
+  color: var(--Base-0);
+}
+.growth {
+}
+.positive {
+  color: var(--Primary-Default);
+}
+.negative {
+  color: red;
+}

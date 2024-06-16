@@ -1,0 +1,142 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.balanceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+.coin {
+  max-width: 40px;
+}
+.infoContainer {
+  background: var(--bg-200);
+  border-radius: 16px;
+  width: 90%;
+  margin: 0 auto;
+}
+.steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  align-items: start;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  align-items: center;
+  border-right: 1px solid var(--Base-700);
+  padding: 20px 12px;
+  height: 100%;
+}
+.step:last-child {
+  border: none;
+}
+
+.valueContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon {
+  max-width: 18px;
+  width: 100%;
+}
+.levelContainer {
+  border-top: 1px solid var(--Base-700);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+.level {
+  display: flex;
+  padding: 3px 10px;
+  padding-bottom: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: var(--Primary-Default);
+}
+.coinContainer {
+  border-radius: 24px;
+  background: var(--bg-200);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 15px;
+}
+.layer1 {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1px solid var(--Base-700);
+
+  background: var(--Base-800);
+  box-shadow: 4px 4px 12px 6px var(--Shadow-48-20, rgba(12, 13, 16, 0.2)) inset,
+    -4px -4px 12px 6px var(--Base-950) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.layer2 {
+  width: 235px;
+  height: 235px;
+  border-radius: 50%;
+  background: var(--Base-900);
+  box-shadow: -4px -4px 8px 0px var(--Base-600) inset,
+    4px 4px 8px 0px var(--Shadow-80-28, rgba(12, 13, 16, 0.5)) inset,
+    0px 4px 24px 0px var(--Shadow-36-18, rgba(12, 13, 16, 0.36));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer3 {
+  width: 235px;
+  height: 235px;
+  border-radius: 50%;
+  border-radius: 255px;
+  background: linear-gradient(135deg, var(--Base-900) 0%, var(Base-950));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+
+  border-radius: 280px;
+  border: 10px solid var(--Base-800);
+  box-shadow: 0px 0px 128px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 8px 24px -2px rgba(0, 0, 0, 0.16), 20px 4px 3px -1px rgba(0, 0, 0, 0.02);
+  margin-bottom: 8px;
+} */
+.img {
+  max-width: 120px;
+  width: 100%;
+}
+
+.balanceIcon {
+  max-width: 20px;
+  width: 100%;
+}

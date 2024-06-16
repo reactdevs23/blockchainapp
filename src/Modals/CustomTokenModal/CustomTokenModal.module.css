@@ -1,0 +1,50 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  padding: 0 20px;
+  padding-bottom: 15px;
+}
+
+.items {
+  padding: 12px 0;
+  border-top: 1px solid var(--Base-700);
+}
+.item {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+  transition: 0.3s;
+  padding: 14px 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.logo {
+  max-width: 24px;
+  width: 100%;
+}
+.iconContainer {
+  background: var(--Primary-Default);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.plusIcon {
+  margin-left: auto;
+  font-size: 24px;
+  color: var(--Base-0);
+}
+
+.text {
+  padding: 16px 0;
+  border-top: 1px solid var(--Base-700);
+  margin-top: auto;
+  justify-self: flex-end;
+}

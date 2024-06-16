@@ -1,0 +1,84 @@
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+.img {
+  display: block;
+  max-width: 100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.details {
+  background: var(--bg-300);
+  border-radius: 12px;
+}
+.profitAndLevel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid var(--Base-800);
+}
+
+.profit {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.profitWrapper {
+  border-right: 1px solid var(--Base-800);
+}
+.levelRequired,
+.profitWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 16px;
+  align-items: center;
+}
+.profitContainer,
+.costValue {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+.costContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+}
+.coin {
+  max-width: 22px;
+  width: 100%;
+}
+.costValue .coin {
+  max-width: 24px;
+}
+.buttonContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+.costValue {
+  margin-left: auto;
+}

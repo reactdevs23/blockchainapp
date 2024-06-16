@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 24px 24px 0px 0px;
+  background: var(--bg-200);
+  padding: 24px;
+}
+
+.balanceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+.coinImg {
+  max-width: 40px;
+  width: 100%;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media only screen and (max-width: 450px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
+}

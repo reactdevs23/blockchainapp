@@ -1,0 +1,45 @@
+.navbarContainer {
+  display: flex;
+
+  width: 100%;
+
+  overflow: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.navbarContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.navbar {
+  display: flex;
+  width: max-content;
+  padding: 10px;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.navItem {
+  color: var(--Base-400);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  border-radius: 36px;
+  padding: 6px 16px;
+
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.navItem.active {
+  background: var(--Primary-Default);
+  color: var(--Primary-Content);
+}
+.navItem:hover {
+  transform: translateY(0);
+}

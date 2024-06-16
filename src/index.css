@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter";
+}
+:root {
+  --gray: #fff;
+
+  --Primary-Content: #fff;
+  /*  */
+
+  /*  */
+
+  /*  */
+
+  /*  */
+  --Base-600: #484b5b;
+  /*  */
+  --Primary-Default: #2b63e1;
+  /* */
+  --Warning-Default: #ffb82d;
+  /*  */
+  --Success-Default: #12be6c;
+  --Red-Default: #fa5a63;
+  /* 
+  --bg-300: #f1f2f4; */
+}
+.dark {
+  /*  */
+  --Base-0: #fff;
+  --Base-100: #f1f2f4;
+  --Base-200: #ebecee;
+  --Base-300: #b6b9c9;
+  --Base-400: #98999c;
+  --Base-500: #747578;
+  --Base-600: #424346;
+
+  --Base-700: #282b3b;
+  /*  */
+  --Base-800: #28292c;
+  /*  */
+  --Base-900: #202124;
+  /*  */
+  --Base-950: #16171a;
+  /*  */
+  --bg-300: #16171a;
+  --bg-100: #28292c;
+  --bg-200: #202124;
+  --border-300: #323336;
+  background: var(--bg-300);
+  min-height: 100vh;
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.light {
+  --Primary-Default: #2b63e1;
+  --Base-0: #16171a;
+  --Base-100: #28292c;
+  --Base-200: #323336;
+  --Base-300: #141727;
+  --Base-400: #98999c;
+  --Base-500: #8a8b8e;
+  --Base-600: #bdbec1;
+  --Base-800: #ebecee;
+  --Base-950: #fff;
+  --Base-900: #f1f2f4;
+  --Base-700: #ebeefa;
+  --border-300: #ebecee;
+  background: #f3f5fa;
+  --gray: #141727;
+  min-height: 100vh;
+  --bg-300: #f7f8fa;
+  --bg-100: #f7f8fa;
+  --bg-200: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+button,
+a {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  background: transparent;
+}
+button:hover,
+a:hover {
+  opacity: 0.8;
+  transform: translateY(-3px);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-bg-dark);
+  border-radius: 4px;
+}
+.overflow {
+  scrollbar-width: thin;
+  scrollbar-color: var(--Primary-Default) rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+/* Chrome, Edge, and Safari browsers */
+.overflow::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 5px;
+}
+.overflow::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background: var(--Primary-Default);
+  border-radius: 100vh;
+  border: none;
+  border-radius: 5px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,28 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+
+  border-radius: 28px;
+  background: var(--Base-900);
+  width: 100%;
+}
+.base950 {
+  background: var(--Base-950);
+}
+.searchIcon {
+  font-size: 20px;
+  color: var(--Base-400);
+  margin-top: 2px;
+  cursor: pointer;
+}
+.input {
+  color: var(--Base-400);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  text-overflow: ellipsis;
+  width: 100%;
+}

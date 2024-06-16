@@ -1,0 +1,135 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 24px 24px;
+  background: var(--bg-200);
+  padding: 20px;
+  height: 100%;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 90%;
+  margin: 0 auto;
+}
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.userBox,
+.soldBox,
+.earnedByTapping {
+  display: flex;
+  padding: 16px 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 12px;
+  background: var(--bg-200);
+}
+.soldAndEarned {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.amountContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.coin {
+  max-width: 18px;
+  width: 18px;
+}
+.userInfo {
+  display: grid;
+  grid-template-columns: auto 1fr 44px;
+
+  align-items: center;
+  gap: 24px 15px;
+  overflow-x: auto;
+  height: 100%;
+}
+.nameAndEarned {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.img {
+  max-width: 48px;
+  width: 100%;
+}
+.amount {
+  color: var(--Base-300);
+}
+.statusContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+.status {
+  display: flex;
+  padding: 4px 10px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 20px;
+  margin-left: auto;
+}
+.invited {
+  background: var(--Warning-Transparent-10, rgba(255, 158, 45, 0.1));
+  background: rgba(255, 158, 45, 0.1);
+  color: var(--Warning-Default);
+}
+.accepted {
+  background: var(--Success-Transparent-10, rgba(31, 183, 120, 0.1));
+  color: var(--Primary-Default);
+}
+
+.heading,
+.name,
+.userNameAndEarned {
+  padding: 0 20px;
+  white-space: nowrap;
+}
+.heading {
+  border-bottom: 1px solid var(--Base-700);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.userNameHeading,
+.name {
+  padding-left: 0;
+}
+.userContainer {
+  display: flex;
+  padding: 16px 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+.earning {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.positionNumber {
+  text-align: center;
+}
+.positionImg {
+  max-width: 40px;
+  margin: 0 auto;
+}

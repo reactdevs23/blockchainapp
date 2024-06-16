@@ -1,0 +1,83 @@
+.heading {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+  font-size: 14px;
+  color: var(--Base-400);
+}
+.sm {
+  font-size: 12px;
+}
+.base {
+  font-size: 16px;
+}
+.lg {
+  font-size: 18px;
+}
+.xl {
+  font-size: 20px;
+}
+.xl2 {
+  font-size: 24px;
+}
+.xl3 {
+  font-size: 30px;
+}
+.xl4 {
+  font-size: 36px;
+}
+.primaryDefault {
+  color: var(--Primary-Default);
+}
+.primaryContent {
+  color: var(--Primary-Content);
+}
+.warningDefault {
+  color: var(--Warning-Default);
+}
+.base0 {
+  color: var(--Base-0);
+}
+.base100 {
+  color: var(--Base-100);
+}
+.base200 {
+  color: var(--Base-200);
+}
+.base300 {
+  color: var(--Base-300);
+}
+.base400 {
+  color: var(--Base-400);
+}
+.base500 {
+  color: var(--Base-500);
+}
+
+.base600 {
+  color: var(--Base-600);
+}
+.base700 {
+  color: var(--Base-700);
+}
+.base800 {
+  color: var(--Base-800);
+}
+.base950 {
+  color: var(--Base-950);
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.bold {
+  font-weight: 700;
+}
+.semiBold {
+  font-weight: 500;
+}
+.font600 {
+  font-weight: 600;
+}

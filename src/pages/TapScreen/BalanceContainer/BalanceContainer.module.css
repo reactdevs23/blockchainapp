@@ -1,0 +1,10 @@
+.balanceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+.coin {
+  max-width: 40px;
+}
