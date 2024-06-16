@@ -19,12 +19,10 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Set a timeout to hide the splash screen after 1 second
     const timer = setTimeout(() => {
-      navigate("/get-started"); // Navigate to the desired route after splash screen
-    }, 1000);
+      navigate("/get-started");
+    }, 2000);
 
-    // Clean up the timer if the component unmounts before the timeout completes
     return () => clearTimeout(timer);
   }, []);
   return (

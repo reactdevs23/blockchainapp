@@ -105,3 +105,6 @@
 .value {
   margin-left: auto;
 }
+.linkText {
+  word-break: break-all;
+}

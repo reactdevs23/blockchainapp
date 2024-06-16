@@ -5,6 +5,8 @@
   padding: 20px 0;
   max-height: 100vh;
   overflow-x: hidden;
+  background: var(--Base-900);
+  min-height: 100vh;
 }
 .pattern {
   position: absolute;

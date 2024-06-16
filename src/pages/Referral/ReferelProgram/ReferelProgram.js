@@ -56,7 +56,7 @@ const ReferelProgram = () => {
           <div className={classes.linkContainer}>
             <Text base500>Refer Link</Text>
             <div className={classes.link}>
-              <Text base0 base>
+              <Text base0 base className={classes.linkText}>
                 {"    http://www.example.com/refer/abc123456"}
               </Text>
 
