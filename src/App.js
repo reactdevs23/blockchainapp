@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
 import Airdrop from "./pages/Airdrop/Airdrop";
@@ -15,12 +15,13 @@ import Statistics from "./pages/Statistics/Statistics";
 
 const App = () => {
   const { isDarkTheme } = useTheme();
-
+  const [startingScreen, setStartingScreen] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/get-started");
+      setStartingScreen(false);
+      navigate("/");
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -30,18 +31,20 @@ const App = () => {
       <h1 className={classes.heading}>Please open in mobile</h1>
 
       <div className={classes.mainWrapper}>
-        <Routes>
-          {" "}
-          <Route path="/" element={<StartingScreen />} />
-          <Route path="/get-started" element={<GetStarted />} />
-          <Route path="/" element={<MainLayout />}>
-            <Route path="/tap-coin" element={<TapScreen />} />
-            <Route path="/airdrop" element={<Airdrop />} />
-            <Route path="/milestones" element={<Milestones />} />
-            <Route path="/referral" element={<Referral />} />
-            <Route path="/statistics" element={<Statistics />} />
-          </Route>
-        </Routes>
+        {startingScreen ? (
+          <StartingScreen />
+        ) : (
+          <Routes>
+            <Route path="/" element={<GetStarted />} />
+            <Route path="/" element={<MainLayout />}>
+              <Route path="/tap-coin" element={<TapScreen />} />
+              <Route path="/airdrop" element={<Airdrop />} />
+              <Route path="/milestones" element={<Milestones />} />
+              <Route path="/referral" element={<Referral />} />
+              <Route path="/statistics" element={<Statistics />} />
+            </Route>
+          </Routes>
+        )}
       </div>
     </div>
   );
