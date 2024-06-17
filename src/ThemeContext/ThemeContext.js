@@ -9,7 +9,7 @@ export const ThemeProvider = ({ children }) => {
 
   // convert to bool
 
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   useEffect(() => {
     if (last_theme) {
