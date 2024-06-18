@@ -62,7 +62,7 @@
 .level {
   display: flex;
   padding: 3px 10px;
-  padding-bottom: 4px;
+
   justify-content: center;
   align-items: center;
   gap: 10px;

@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-
+import React, { useState, useRef, useEffect } from "react";
 const useOnClickOutside = (ref, handler) => {
   useEffect(() => {
     const listener = (event) => {
@@ -33,4 +32,66 @@ export const handleKeyDown = (event) => {
   ) {
     event.preventDefault();
   }
+};
+
+export const Counter = ({ start, end, durationTime }) => {
+  const [count, setCount] = useState(start);
+  const prevEndRef = useRef(end);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const prevEnd = prevEndRef.current;
+          if (prevEnd !== end) {
+            prevEndRef.current = end;
+            const diff = Math.abs(end - count);
+            const duration = 1000;
+            const increment = Math.ceil(diff / (duration / 10));
+            let currentCount = count;
+            const interval = setInterval(() => {
+              if (currentCount < end) {
+                currentCount += increment;
+                if (currentCount >= end) {
+                  clearInterval(interval);
+                  setCount(end);
+                } else {
+                  setCount(currentCount);
+                }
+              } else if (currentCount > end) {
+                currentCount -= increment;
+                if (currentCount <= end) {
+                  clearInterval(interval);
+                  setCount(end);
+                } else {
+                  setCount(currentCount);
+                }
+              } else {
+                clearInterval(interval);
+              }
+            }, durationTime);
+            return () => clearInterval(interval);
+          }
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [end, count, durationTime]);
+
+  return <span ref={ref}>{count.toLocaleString()}</span>;
 };

@@ -15,7 +15,6 @@ const TapScreen = () => {
   const [balance, setBalance] = useState(12345);
   return (
     <div className={classes.mainWrapper}>
-      {/* <Header heading={selectedTab} /> */}
       <div className={classes.wrapper}>
         <BalanceContainer balance={balance} spinCoin={spinCoin} />
 

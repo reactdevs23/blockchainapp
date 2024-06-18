@@ -3,6 +3,7 @@ import classes from "./TapBot.module.css";
 import { balanceIcon, coin, shinyCoin, shinyCoinGif } from "../../../images";
 import { Text } from "../../../components/common";
 import ProgressBar from "../../../components/common/ProgressBar/ProgressBar";
+import { Counter } from "../../../hooks";
 
 const TapBot = ({ spinCoin, setSpinCoin, setBalance }) => {
   const restAmount = 10000;
@@ -108,7 +109,8 @@ const TapBot = ({ spinCoin, setSpinCoin, setBalance }) => {
       <div className={classes.balanceContainer}>
         <img src={balanceIcon} alt="#" className={classes.balanceIcon} />
         <Text base0 base>
-          {amount.toLocaleString()} / {restAmount.toLocaleString()}
+          {<Counter start={restAmount} end={amount} durationTime={20} />} /{" "}
+          {restAmount.toLocaleString()}
         </Text>
       </div>
     </div>

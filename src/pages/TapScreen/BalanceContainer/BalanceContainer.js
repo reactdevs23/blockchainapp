@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./BalanceContainer.module.css";
 import { shinyCoin, shinyCoinGif } from "../../../images";
 import { Text } from "../../../components/common";
-import Counter from "../../../components/common/Counter/Counter";
+import { Counter } from "../../../hooks";
 
 const BalanceContainer = ({ balance, spinCoin }) => {
   return (
@@ -13,7 +13,8 @@ const BalanceContainer = ({ balance, spinCoin }) => {
         className={classes.coin}
       />
       <Text xl4 semiBold base0 className={classes.balance}>
-        {balance.toLocaleString()}
+        {/* {balance.toLocaleString()} */}
+        <Counter start={balance} end={balance} durationTime={20} />
       </Text>
     </div>
   );
