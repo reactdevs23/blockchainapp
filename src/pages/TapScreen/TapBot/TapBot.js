@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./TapBot.module.css";
-import { balanceIcon, coin } from "../../../images";
+import { balanceIcon, coin, shinyCoin, shinyCoinGif } from "../../../images";
 import { Text } from "../../../components/common";
 import ProgressBar from "../../../components/common/ProgressBar/ProgressBar";
 import Counter from "./../../../components/common/Counter/Counter";
 
 const TapBot = () => {
+  const [spinCoin, setSpinCoin] = useState(false);
   return (
     <div className={classes.wrapper}>
       <div className={classes.infoContainer}>
@@ -56,14 +57,12 @@ const TapBot = () => {
           </div>
         </div>
       </div>
-      <div className={classes.coinContainer}>
+      <div className={classes.coinContainer} onClick={() => setSpinCoin(true)}>
         <button className={classes.layer1}>
           <div className={classes.layer2}>
             <div className={classes.layer3}>
               <img
-                src={
-                  "https://em-content.zobj.net/source/apple/391/rocket_1f680.png"
-                }
+                src={spinCoin ? shinyCoinGif : shinyCoin}
                 alt="#"
                 className={classes.img}
               />

@@ -21,6 +21,7 @@ import copyIcon from "./copy.png";
 
 import coin from "./tapbot/coin.png";
 import shinyCoin from "./tapbot/shinyCoin.png";
+import shinyCoinGif from "./shiny-coins-loop.gif";
 import token from "./tapbot/token.png";
 import lightToken from "./tapbot/lightToken.png";
 import coinLogo from "./tapbot/coinLogo.png";
@@ -57,6 +58,7 @@ export {
   placholder,
   lightPlaceholder,
   shinyCoin,
+  shinyCoinGif,
   token,
   lightToken,
   coinLogo,
