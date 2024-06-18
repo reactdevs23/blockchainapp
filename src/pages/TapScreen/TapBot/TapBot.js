@@ -1,12 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./TapBot.module.css";
 import { balanceIcon, coin, shinyCoin, shinyCoinGif } from "../../../images";
 import { Text } from "../../../components/common";
 import ProgressBar from "../../../components/common/ProgressBar/ProgressBar";
-import Counter from "./../../../components/common/Counter/Counter";
 
-const TapBot = () => {
-  const [spinCoin, setSpinCoin] = useState(false);
+const TapBot = ({ spinCoin, setSpinCoin, setBalance }) => {
+  const restAmount = 10000;
+  const [amount, setAmount] = useState(restAmount);
+  const [flyTexts, setFlyTexts] = useState([]);
+
+  useEffect(() => {
+    if (spinCoin) {
+      const timer = setTimeout(() => {
+        setSpinCoin(false);
+      }, 1500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [spinCoin]);
+
+  useEffect(() => {
+    if (flyTexts.length > 0) {
+      const timer = setTimeout(() => {
+        setFlyTexts((prev) => prev.slice(1));
+      }, 1000); // Duration of each fly animation
+
+      return () => clearTimeout(timer);
+    }
+  }, [flyTexts]);
+
+  const handleClick = () => {
+    setSpinCoin(true);
+    setBalance((prev) => prev + 1);
+    setAmount((prev) => prev - 1);
+    setFlyTexts((prev) => [...prev, "+1"]);
+  };
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.infoContainer}>
@@ -17,10 +46,7 @@ const TapBot = () => {
             </Text>
             <div className={classes.valueContainer}>
               <img src={coin} alt="#" className={classes.icon} />
-              <Text base0>
-                {" "}
-                <Counter start={0} end={1000} durationTime={20} />
-              </Text>
+              <Text base0>1000</Text>
             </div>
           </div>
           <div className={classes.step}>
@@ -28,7 +54,7 @@ const TapBot = () => {
               Next level
             </Text>
             <Text base0 textCenter>
-              <Counter start={0} end={50000} durationTime={20} />
+              50000
             </Text>
           </div>
           <div className={classes.step}>
@@ -37,16 +63,14 @@ const TapBot = () => {
             </Text>
             <div className={classes.valueContainer}>
               <img src={coin} alt="#" className={classes.icon} />
-              <Text base0>
-                <Counter start={0} end={1000} durationTime={20} />
-              </Text>
+              <Text base0>1000</Text>
             </div>
           </div>
         </div>
 
         <div className={classes.levelContainer}>
           <Text base0 semiBold>
-            Novince
+            Novice
           </Text>
           <ProgressBar progress={10} />
           <div className={classes.level}>
@@ -57,8 +81,8 @@ const TapBot = () => {
           </div>
         </div>
       </div>
-      <div className={classes.coinContainer} onClick={() => setSpinCoin(true)}>
-        <button className={classes.layer1}>
+      <div className={classes.coinContainer}>
+        <button className={classes.layer1} onClick={handleClick}>
           <div className={classes.layer2}>
             <div className={classes.layer3}>
               <img
@@ -67,16 +91,25 @@ const TapBot = () => {
                 className={classes.img}
               />
             </div>
-          </div>
+          </div>{" "}
+          {flyTexts.map((text, index) => (
+            <div key={index} className={classes.flyText}>
+              <Text xl base0>
+                {text}
+              </Text>
+              <Text base base0>
+                {text}
+              </Text>
+            </div>
+          ))}
         </button>
+      </div>
 
-        <div className={classes.balanceContainer}>
-          <img src={balanceIcon} alt="#" className={classes.balanceIcon} />
-          <Text base0 base>
-            0/
-            <Counter start={0} end={10000} durationTime={20} />
-          </Text>
-        </div>
+      <div className={classes.balanceContainer}>
+        <img src={balanceIcon} alt="#" className={classes.balanceIcon} />
+        <Text base0 base>
+          {amount.toLocaleString()} / {restAmount.toLocaleString()}
+        </Text>
       </div>
     </div>
   );

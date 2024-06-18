@@ -11,13 +11,21 @@ import MyBooster from "./MyBooster/MyBooster";
 const TapScreen = () => {
   const tabs = ["Tap Bot", "Booster", "My Booster"];
   const [selectedTab, setSelectedTab] = useState("Tap Bot");
+  const [spinCoin, setSpinCoin] = useState(false);
+  const [balance, setBalance] = useState(12345);
   return (
     <div className={classes.mainWrapper}>
       {/* <Header heading={selectedTab} /> */}
       <div className={classes.wrapper}>
-        <BalanceContainer balance={12345} />
+        <BalanceContainer balance={balance} spinCoin={spinCoin} />
 
-        {selectedTab === "Tap Bot" && <TapBot />}
+        {selectedTab === "Tap Bot" && (
+          <TapBot
+            spinCoin={spinCoin}
+            setSpinCoin={setSpinCoin}
+            setBalance={setBalance}
+          />
+        )}
         {selectedTab === "Booster" && <Boosters />}
         {selectedTab === "My Booster" && <MyBooster />}
       </div>

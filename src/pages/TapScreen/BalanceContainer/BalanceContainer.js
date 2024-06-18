@@ -1,15 +1,19 @@
 import React from "react";
 import classes from "./BalanceContainer.module.css";
-import { shinyCoinGif } from "../../../images";
+import { shinyCoin, shinyCoinGif } from "../../../images";
 import { Text } from "../../../components/common";
 import Counter from "../../../components/common/Counter/Counter";
 
-const BalanceContainer = ({ balance }) => {
+const BalanceContainer = ({ balance, spinCoin }) => {
   return (
     <div className={classes.balanceContainer}>
-      <img src={shinyCoinGif} alt="#" className={classes.coin} />
+      <img
+        src={spinCoin ? shinyCoinGif : shinyCoin}
+        alt="#"
+        className={classes.coin}
+      />
       <Text xl4 semiBold base0 className={classes.balance}>
-        <Counter start={0} end={balance} durationTime={20} />
+        {balance.toLocaleString()}
       </Text>
     </div>
   );
